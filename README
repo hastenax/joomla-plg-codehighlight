@@ -1,0 +1,95 @@
+Code HighLight
+====================
+The CodeHighLight plugin was based on CodeCitation plugin by Konstantin Nizhegorodov. It was rewrited for Joomla 1.6 and JS Syntax HighLighter was updated to version 3.0
+
+The CodeHighLight plugin allows you to include code sections in your Joomla 1.6-2.5 content using {code} or custom tag.
+Use of the {code} tag allows you to work with code sections in your Joomla WYSIWIG editors.
+
+Plugin uses SyntaxHighlighter 3.0 library from http://alexgorbatchev.com/wiki/SyntaxHighlighter
+
+Supports: syntax highlighting for ActionScript3, AppleScript, Bash/shell, ColdFusion, C#, C++, CSS, Delphi, Diff, Groovy, JavaScript, Java, JavaFX, Perl, PHP, Plain Text, PowerShell, Python, Ruby, Sass, Scala, SQL, Visual Basic, XML, HTML, XSLT
+
+!!!BEWARE of your visual editor (JCE or JCK for example), it can place tags in your code, after this code became invalid!!!
+
+INSTALLATION INSTRUCTIONS:
+====================
+
+- download the CodeHighLight plugin.
+- install the plugin using the Joomla Extensions install utility.
+- ENABLE the new CodeHighLight plugin with the Joomla backend plugin manager.
+- set default parameters for the plugin engine.
+
+USAGE:
+====================
+The syntax for the usage is:
+
+{code [class="<parameters for SyntaxHighlight engine>"][ width="<>"]}
+<text to be formatted goes here>
+{/code}
+
+where:
+  <parameters for SyntaxHighlight engine> is a parameter string for the engine - see examples
+  
+EXAMPLES
+====================
+{code class="brush: xml; gutter: false;" width="500px"}
+xml goes here
+{/code}
+
+OR (if you set default language to C++, for example):
+
+{code}
+C++ code goes here
+{/code}
+
+OR if you set custom tag=codetag in plugin parameters and default language=C++:
+{codetag}
+C++ code goes here
+{/codetag}
+
+ADDITIONAL PARAMETERS
+====================
+auto-links: true | false; Allows you to turn detection of links in the codecitation block on or off. If the option is turned off, URLs won't be clickable
+collapse: true | false; Allows you to force citation block on the page to be collapsed by default.
+gutter: true | false; Allows you to turn gutter with line numbers on or off by default.
+smart-tabs: true | false; Allows you to turn smart tabs feature on or off by default.
+tab-size: 4; Allows you to adjust default tab size.
+toolbar: true | false; Toggles toolbar on/off by default.
+wrap-lines: true | false; Allows you to turn line wrapping feature on/off by default.
+
+SUPPORTED LANGUAGES BRUSHES (ALIASES)
+====================
+"as3", "actionscript3",
+"bash", "shell",
+"cpp", "c"
+"csharp", "c#", "c-sharp",
+"css",
+"pascal", "delphi",
+"diff", "patch",
+"groovy",
+"java",
+"javafx", "jfx",
+"js", "javascript", "jscript",
+"perl", "pl", "Perl",
+"php",
+"text", "plain",
+"powershell", "ps",
+"python", "py",
+"ruby", "rails", "ror",
+"scala",
+"sql",
+"vb", "vbnet", "VisualBasic",
+"xml", "xhtml", "xslt", "html",
+"applescript",
+"coldfusion",
+"sass", 
+"erlang".
+
+WHAT'S NEW
+====================
+1.0.1:
+	- improved readme
+	- joomla 1.6 - 2.5 native support
+	- fixed issue with all xml and html markups, some tags were missed
+1.0:
+	- initial release

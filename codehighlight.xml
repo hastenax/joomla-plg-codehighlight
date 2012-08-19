@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content">
+  <name>Content - Code HighLight</name>
+  <author>Vladislav Galyanin</author>
+  <creationDate>Jan, 2011</creationDate>
+  <copyright>Copyright 2011-2012 Union D. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorUrl>http://union-d.ru/</authorUrl>
+  <version>1.0.1</version>
+  <description><![CDATA[
+  <p>The Code Highlight plugin allows you to include code sections in your Joomla 1.6-2.5 content using {code} or custom tag and highlight the syntax with the pretty markup.</p>
+  <p>Use of the {code} tag allows you to work with code sections in your Joomla WYSIWIG editors.</p>
+  <p>Plugin uses SyntaxHighlighter 3.0 library from http://alexgorbatchev.com/wiki/SyntaxHighlighter</p>
+  <p>Supports: syntax highlighting for ActionScript3, Bash/shell, C#, C++, CSS, Delphi, Diff, Groovy, JavaScript, Java, JavaFX, Perl, PHP, Plain Text, PowerShell, Python, Ruby, Scala, SQL, Visual Basic, XML, HTML, XSLT</p>
+  <p>Usage example: {code class="brush: xml;"}CODE HERE{/code}</p>
+  <p>See README for more information or examples</p>
+  <p>BEWARE of your visual editor (JCE or JCK for example), it can place tags in your code, after this code became invalid!</p>
+  ]]>
+  </description>
+	<files>
+		<filename plugin="codehighlight">codehighlight.php</filename>
+		<filename>README</filename>
+		<filename>scripts/clipboard.swf</filename>
+		<filename>scripts/shBrushAS3.js</filename>
+		<filename>scripts/shBrushBash.js</filename>
+		<filename>scripts/shBrushCpp.js</filename>
+		<filename>scripts/shBrushCSharp.js</filename>
+		<filename>scripts/shBrushCss.js</filename>
+		<filename>scripts/shBrushDelphi.js</filename>
+		<filename>scripts/shBrushDiff.js</filename>
+		<filename>scripts/shBrushGroovy.js</filename>
+		<filename>scripts/shBrushJava.js</filename>
+		<filename>scripts/shBrushJavaFX.js</filename>
+		<filename>scripts/shBrushJScript.js</filename>
+		<filename>scripts/shBrushPerl.js</filename>
+		<filename>scripts/shBrushPhp.js</filename>
+		<filename>scripts/shBrushPlain.js</filename>
+		<filename>scripts/shBrushPowerShell.js</filename>
+		<filename>scripts/shBrushPython.js</filename>
+		<filename>scripts/shBrushRuby.js</filename>
+		<filename>scripts/shBrushScala.js</filename>
+		<filename>scripts/shBrushSql.js</filename>
+		<filename>scripts/shBrushVb.js</filename>
+		<filename>scripts/shBrushXml.js</filename>
+
+		<filename>scripts/shBrushAppleScript.js</filename>
+		<filename>scripts/shBrushColdFusion.js</filename>
+		<filename>scripts/shBrushErlang.js</filename>
+		<filename>scripts/shBrushSass.js</filename>
+
+		<filename>scripts/shCore.js</filename>
+		<filename>scripts/shLegacy.js</filename>
+		<filename>styles/help.png</filename>
+		<filename>styles/magnifier.png</filename>
+		<filename>styles/page_white_code.png</filename>
+		<filename>styles/page_white_copy.png</filename>
+		<filename>styles/printer.png</filename>
+		<filename>styles/shCore.css</filename>
+		<filename>styles/shThemeDefault.css</filename>
+		<filename>styles/shThemeDjango.css</filename>
+		<filename>styles/shThemeEmacs.css</filename>
+		<filename>styles/shThemeFadeToGrey.css</filename>
+		<filename>styles/shThemeMidnight.css</filename>
+		<filename>styles/shThemeRDark.css</filename>
+		<filename>styles/wrapping.png</filename>
+		
+		<filename>styles/index.html</filename>
+		<filename>scripts/index.html</filename>
+		<filename>index.html</filename>
+		<filename>languages/index.html</filename>
+		<filename>languages/en-GB/index.html</filename>
+	
+	</files>
+<languages>
+		<language tag="en-GB">languages/en-GB/en-GB.plg_content_CodeHighlight.ini</language>
+</languages>
+	<config>
+			<fields name="params">
+				<fieldset name="basic">
+				<field name="theme" type="list" default="shThemeDefault.css" label="Color theme" description="Select color theme you preffer for the plugin">
+					<option value="shThemeDefault.css">Default</option>
+					<option value="shThemeDjango.css">Django</option>
+					<option value="shThemeEmacs.css">Emacs</option>
+					<option value="shThemeFadeToGrey.css">FadeToGrey</option>
+					<option value="shThemeMidnight.css">Midnight</option>
+					<option value="shThemeRDark.css">RDark</option>
+				</field>
+				<field name="alternativetag" type="text" default="" label="Alternative tag to trigger the plugin usage." description="If you think that {codecitation} is too long and preffer shorter syntax, feel free to specify your own tag. For example: code" />
+				<field type="spacer" default="&lt;b&gt;Default engine fieldeters values:&lt;/b&gt;" />		
+				<field name="defaultlang" type="list" default="text" label="Default language to cite" description="If you cite mostly code writen on particular language, you are able to specify it here and ommit brush name in codecitation tag usage (shorten syntax).">
+					<option value="as3">actionscripts3</option>
+					<option value="bash">bash</option>
+					<option value="cpp">cpp</option>
+					<option value="csharp">csharp</option>
+					<option value="css">css</option>
+					<option value="diff">diff</option>
+					<option value="groovy">groovy</option>
+					<option value="java">java</option>
+					<option value="javafx">javafx</option>
+					<option value="javascript">javascript</option>
+					<option value="pascal">pascal</option>
+					<option value="perl">perl</option>
+					<option value="php">php</option>
+					<option value="powershell">powershell</option>
+					<option value="python">python</option>
+					<option value="ruby">ruby</option>
+					<option value="scala">scala</option>
+					<option value="sql">sql</option>
+					<option value="vb">vb</option>
+					<option value="xml">xml</option>
+						<option value="coldfusion">coldfusion</option>
+						<option value="sass">sass</option>
+						<option value="applescript">applescript</option>
+						<option value="erlang">erlang</option>
+					<option value="text">plain text</option>			
+				</field>
+				<field name="auto-links" type="list" default="1" label="Auto-links" description="Allows you to turn detection of links in the codecitation block on/off. If the option is turned off, URLs won't be clickable.">
+					<option value="0">"false"</option>
+					<option value="1">"true"</option>
+				</field>
+				<field name="collapse" type="list" default="0" label="Collapse" description="Allows you to force citation block on the page to be collapsed by default.">
+					<option value="0">"false"</option>
+					<option value="1">"true"</option>
+				</field>
+				<field name="gutter" type="list" default="1" label="Gutter" description="Allows you to turn gutter with line numbers on/off by default.">
+					<option value="0">"false"</option>
+					<option value="1">"true"</option>
+				</field>
+				<field name="smart-tabs" type="list" default="1" label="Smart tabs" description="Allows you to turn smart tabs feature on/off by default.">
+					<option value="0">"false"</option>
+					<option value="1">"true"</option>
+				</field>
+				<field name="tab-size" type="text" default="4" label="Tab size" decription="Allows you to adjust default tab size." />
+				<field name="toolbar" type="list" default="1" label="Toolbar" description="Toggles toolbar on/off by default.">
+					<option value="0">"false"</option>
+					<option value="1">"true"</option>
+				</field>
+				<field name="wrap-lines" type="list" default="1" label="Wrap lines" description="Allows you to turn line wrapping feature on/off by default.">
+					<option value="0">"false"</option>
+					<option value="1">"true"</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
